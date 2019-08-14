@@ -16,6 +16,9 @@ public class ArrayImpl<E extends Object & Comparable<? super E>> implements Arra
         this.data = (E[]) new Object[initialCapacity];
     }
 
+    public ArrayImpl(E[] data, int size) {
+    }
+
     @Override
     public void add(E value){
         checkGrow();

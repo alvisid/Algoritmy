@@ -2,6 +2,14 @@ package Study_2.array;
 
 public class SortedArrayImpl<E extends Object & Comparable<? super E>> extends ArrayImpl<E>{
 
+    public SortedArrayImpl(int size) {
+        super(size);
+    }
+
+    private SortedArrayImpl(E[] data, int size) {
+        super(data, size);
+    }
+
     @Override
     public void add(E value){
         checkGrow();
