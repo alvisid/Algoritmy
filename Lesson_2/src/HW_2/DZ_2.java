@@ -12,16 +12,16 @@ public class DZ_2 {
 
         randomInitialize(arr);
 
-        Array<Integer> copy1 = arr.copy();
-        Array<Integer> copy2 = arr.copy();
-        Array<Integer> copy3 = arr.copy();
+        Array copy1 = arr.copy();
+        Array copy2 = arr.copy();
+        Array copy3 = arr.copy();
 
         ExecutorService executorService = Executors.newFixedThreadPool(3);
 
         List<Callable<Void>> tasks = List.of(
-                measureTime(() -> copy1.sortBubble(), "Sort Bubble"),
-                measureTime(() -> copy2.sortSelect(), "Sort Select"),
-                measureTime(() -> copy3.sortInsert(), "Sort Insert")
+                measureTime(copy1::sortBubble, "Sort Bubble"),
+                measureTime(copy2::sortSelect, "Sort Select"),
+                measureTime(copy3::sortInsert, "Sort Insert")
         );
 
         for (Future<Void> future : executorService.invokeAll(tasks)) {
