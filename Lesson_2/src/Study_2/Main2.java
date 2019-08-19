@@ -3,11 +3,6 @@ package Study_2;
 import Study_2.array.Array;
 import Study_2.array.ArrayImpl;
 
-import Study_2.array.Array;
-import Study_2.array.ArrayImpl;
-import Study_2.array.SortedArrayImpl;
-
-
 import java.util.Arrays;
 
 public class Main2 {
