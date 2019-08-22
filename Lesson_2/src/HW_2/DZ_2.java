@@ -8,13 +8,13 @@ public class DZ_2 {
     private static final int ARRAY_CAPACITY = 10_000;
 
     public static void main(String[] args) throws InterruptedException, TimeoutException, ExecutionException {
-        Array arr = new OrderedArrayImpl(ARRAY_CAPACITY);
+        Array<Integer> arr = new OrderedArrayImpl<Integer>(ARRAY_CAPACITY);
 
         randomInitialize(arr);
 
-        Array copy1 = arr.copy();
-        Array copy2 = arr.copy();
-        Array copy3 = arr.copy();
+        Array<Integer> copy1 = arr.copy();
+        Array<Integer> copy2 = arr.copy();
+        Array<Integer> copy3 = arr.copy();
 
         ExecutorService executorService = Executors.newFixedThreadPool(3);
 

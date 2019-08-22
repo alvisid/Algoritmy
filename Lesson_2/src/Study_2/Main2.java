@@ -6,7 +6,7 @@ import Study_2.array.ArrayImpl;
 import java.util.Arrays;
 
 public class Main2 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
 //        testArray();
 
@@ -37,12 +37,9 @@ public class Main2 {
     }
 
 
-
-
-
-    private static void testArray(){
+    private static void testArray() {
 //        int[] a = new int[] {1,2,3};
-        int[] a = {1,2,3};
+        int[] a = {1, 2, 3};
 
 //        int[] a = new int[5];
 //        a[0] = 1;
@@ -50,11 +47,11 @@ public class Main2 {
 //        a[2] = 1;
 
 
-        for (int i = 0; i < a.length; i++){
+        for (int i = 0; i < a.length; i++) {
             System.out.println(a[i]);
         }
         System.out.println("-------");
-        for (int value : a){
+        for (int value : a) {
             System.out.println(value);
         }
         System.out.println("-------");

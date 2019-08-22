@@ -1,6 +1,6 @@
 package Study_2.array;
 
-public class SortedArrayImpl<E extends Object & Comparable<? super E>> extends ArrayImpl<E>{
+public class SortedArrayImpl<E extends Object & Comparable<? super E>> extends ArrayImpl<E> {
 
     public SortedArrayImpl(int size) {
         super(size);
@@ -11,36 +11,35 @@ public class SortedArrayImpl<E extends Object & Comparable<? super E>> extends A
     }
 
     @Override
-    public void add(E value){
+    public void add(E value) {
         checkGrow();
         int index;
 
-        for (index = 0; index < size; index++){
-            if (data[index].compareTo(value) > 0){
+        for (index = 0; index < size; index++) {
+            if (data[index].compareTo(value) > 0) {
                 break;
             }
-            for (int i = size; i > index; i--){
+            for (int i = size; i > index; i--) {
                 data[i] = data[i - 1];
             }
             data[index] = value;
             size++;
         }
     }
+
     @Override
-    public int indexOf(E value){
+    public int indexOf(E value) {
         int low = 0;
         int high = size - 1;
 
         while (low <= high) {
             int mid = (low + high) / 2;
 
-            if (data[mid].equals(value)){
+            if (data[mid].equals(value)) {
                 return mid;
-            }
-            else if (data[mid].compareTo(value) > 0){
+            } else if (data[mid].compareTo(value) > 0) {
                 high = mid - 1;
-            }
-            else {
+            } else {
                 low = mid + 1;
             }
         }
