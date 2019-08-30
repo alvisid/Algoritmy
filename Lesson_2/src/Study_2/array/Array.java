@@ -14,9 +14,11 @@ public interface Array<E> extends ICollection {
     E removeByIndex(int index);
 
     boolean contains(E value);
+
     void display();
-    default void addAll(E... values){
-        for (E value : values){
+
+    default void addAll(E... values) {
+        for (E value : values) {
             add(value);
         }
     }
